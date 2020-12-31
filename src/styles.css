@@ -1,0 +1,41 @@
+form {
+  padding-top: 60px;
+  display: block;
+}
+
+h1 {
+  text-align: right;
+  display: block;
+  color: #006ec5;
+}
+
+h2 {
+  text-align: right;
+  display: block;
+  padding: 10px;
+  color: #4f5258;
+}
+
+.searchTemp {
+  text-align: right;
+  display: block;
+  color: #006ec5;
+  padding: 5px;
+  font-size: 50px;
+}
+
+.fa-wind {
+  text-align: center;
+  font-size: 200px;
+  padding-top: 60px;
+  color: blue;
+  display: block;
+}
+
+.fa-cloud-sun-rain {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 60px;
+  color: blue;
+  display: block;
+}
