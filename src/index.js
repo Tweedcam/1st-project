@@ -45,8 +45,8 @@ function cityTemp(response) {
   p.innerHTML = `${temperature}°c`;
 }
 
-let location = document.querySelector("#current-location");
-location.addEventListener("click", currentLocation);
+let locationButton = document.querySelector("#current-location");
+locationButton.addEventListener("click", currentLocation);
 navigator.geolocation.getCurrentPosition(currentLocation);
 
 function currentLocation(position) {
