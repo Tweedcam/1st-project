@@ -6,6 +6,8 @@ form {
 h1 {
   text-align: right;
   display: block;
+  margin: 0px 0px 8px;
+  padding: 10px;
   color: #006ec5;
 }
 
@@ -16,6 +18,10 @@ h2 {
   color: #4f5258;
 }
 
+.box {
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  border: 9px;
+}
 .searchForm {
   display: block;
 }
@@ -30,7 +36,6 @@ h2 {
 .pinpoint {
   display: block;
   position: relative;
-  top: 5px;
 }
 
 .description {
