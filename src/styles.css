@@ -28,7 +28,10 @@ h2 {
 }
 
 .description {
-  display: inline-block;
+  text-align: right;
+  display: block;
+  padding: 5px;
+  font-sixe: 30px;
 }
 
 .fa-wind {
