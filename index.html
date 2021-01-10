@@ -15,13 +15,13 @@
 <body>
     <div class="container">
         <div class="card">
-            <div class="card-body" style="width: auto;">
-                <form id="search-form">
+            <div class="card-body" style="width: 600;">
+                <form id="search-form" class="searchForm"class="col-sm-">
                     <input type="text" id="city-input" placeholder="Enter City" autofocus="on" autocomplete="off" />
                     <input type="submit" value="search" />
                 </form>
-                <div class="pinpoint">
-                    <button id="current-location">
+                <div class="pinpoint" >
+                    <button  id="current-location">
                         Location
                     </button>
                 </div>
@@ -34,6 +34,9 @@
                 </h2>
 
                 <p class="searchTemp" id="city-temp"></p>
+                <span>
+                    Windy
+                </span>
 
                 <hr />
 
@@ -80,6 +83,15 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Fri</h5>
+                                <p class="card-text">3°c</p>
+                                <i class="fas fa-cloud-sun-rain"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Sat</h5>
                                 <p class="card-text">3°c</p>
                                 <i class="fas fa-cloud-sun-rain"></i>
                             </div>

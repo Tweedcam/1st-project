@@ -16,12 +16,19 @@ h2 {
   color: #4f5258;
 }
 
+.searchForm {
+  display: block;
+}
 .searchTemp {
   text-align: right;
   display: block;
   color: #006ec5;
   padding: 5px;
   font-size: 50px;
+}
+
+.description {
+  display: inline-block;
 }
 
 .fa-wind {
