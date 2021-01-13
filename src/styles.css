@@ -38,11 +38,11 @@ h2 {
   position: relative;
 }
 
-.description {
+.summary {
   text-align: right;
   display: block;
   padding: 5px;
-  font-sixe: 30px;
+  font-size: 30px;
 }
 
 .fa-wind {

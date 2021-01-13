@@ -44,16 +44,15 @@ function cityTemp(response) {
   let temperature = Math.round(response.data.main.temp);
   p.innerHTML = `${temperature}°c`;
   let cityElement = document.querySelector("#current-city");
-  cityElement.innerHTML= (response.data.name);
+  cityElement.innerHTML= response.data.name;
+  let descriptionElement= document.querySelector("#description");
+  descriptionElement.innerHTML=response.data.weather[0].description;
   
 }
 
 
-
-
 function currentLocation(position) {
-  console.log(position);
-  let lat =(position.coords.latitude);
+  let lat =Math.round(position.coords.latitude);
   let lon = Math.round(position.coords.longitude);
   let key = "6a60b4e3bf611302bb287d289f5f7a29";
   let units = "metric";
