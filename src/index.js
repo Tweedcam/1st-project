@@ -45,8 +45,10 @@ function cityTemp(response) {
   p.innerHTML = `${temperature}°c`;
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML= (response.data.name);
-
+  
 }
+
+
 
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", currentLocation);
