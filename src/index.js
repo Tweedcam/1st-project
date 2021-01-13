@@ -35,14 +35,17 @@ function search(event) {
   let unit = "metric";
   let apiKey = "6a60b4e3bf611302bb287d289f5f7a29";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
-
   axios.get(apiUrl).then(cityTemp);
 }
+
 
 function cityTemp(response) {
   let p = document.querySelector("#city-temp");
   let temperature = Math.round(response.data.main.temp);
   p.innerHTML = `${temperature}°c`;
+  let cityElement = document.querySelector("#current-city");
+  cityElement.innerHTML= (response.data.name);
+
 }
 
 let locationButton = document.querySelector("#current-location");
