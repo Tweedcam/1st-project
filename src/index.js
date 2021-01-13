@@ -50,13 +50,10 @@ function cityTemp(response) {
 
 
 
-let locationButton = document.querySelector("#current-location");
-locationButton.addEventListener("click", currentLocation);
-navigator.geolocation.getCurrentPosition(currentLocation);
 
 function currentLocation(position) {
   console.log(position);
-  let lat = Math.round(position.coords.latitude);
+  let lat =(position.coords.latitude);
   let lon = Math.round(position.coords.longitude);
   let key = "6a60b4e3bf611302bb287d289f5f7a29";
   let units = "metric";
@@ -64,3 +61,4 @@ function currentLocation(position) {
 
   axios.get(url).then(cityTemp);
 }
+
