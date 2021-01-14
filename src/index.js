@@ -38,6 +38,18 @@ function search(event) {
   axios.get(apiUrl).then(cityTemp);
 }
 
+function searchCity(city) {
+  let apiKey = "6a60b4e3bf611302bb287d289f5f7a29";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(cityTemp);
+}
+
+function defaultSearch(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
+
 
 function cityTemp(response) {
   let p = document.querySelector("#city-temp");
@@ -70,3 +82,5 @@ function getCurrentLocation(event) {
 
 let locationButton= document.querySelector("#current-location");
 locationButton.addEventListener("click",getCurrentLocation);
+
+searchCity("London")
