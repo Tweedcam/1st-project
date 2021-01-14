@@ -61,3 +61,5 @@ function currentLocation(position) {
   axios.get(url).then(cityTemp);
 }
 
+let locationButton= document.querySelector("#current-location");
+locationButton.addEventListener("click",currentLocation);

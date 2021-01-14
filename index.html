@@ -14,17 +14,13 @@
 
 <body>
     <div class="container">
-        <div class="card">
             <div class="box" class="card-body" style="width:500;">
                 <form id="search-form" class="searchForm"class="col-sm-">
-                    <input type="text" id="city-input" placeholder="Enter City" autofocus="on" autocomplete="off" />
-                    <input type="submit" value="search" />
+                    <input type="text" id="city-input" placeholder="Enter City" autofocus="on" autocomplete="off" aria-label="default input example"/>
+                    <input type="submit" value="search" autofocus="on" class="btn btn-primary"/>
+                     <input type ="submit" value= "Location"autofocus="on" id="current-location"class="pinpoint"class="btn btn-warning"/> 
                 </form>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end" class="locator">
-                    <button  id="current-location"class="pinpoint"class="btn btn-primary me-md-2">
-                        Location
-                    </button>
-                </div>
+                
                 <i class="fas fa-wind"></i>
                 <h1 id="current-city">
                     Birmingham
@@ -44,7 +40,6 @@
     
                 </div>
             </div>
-        </div>
     </div>
 
     <p>
