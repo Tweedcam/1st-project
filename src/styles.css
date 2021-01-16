@@ -18,6 +18,12 @@ h2 {
   color: #4f5258;
 }
 
+.container {
+  border: 9px;
+  size: 300px;
+  padding: 10px;
+  margin: 20px;
+}
 .box {
   background-image: linear-gradient(
     -225deg,
