@@ -14,23 +14,25 @@
 
 <body>
     <div class="container">
-            <div class="box" class="card-body" style="width:500;">
+            <div class="wrapper" class="card-body">
                 <form id="search-form" class="searchForm"class="col-sm-">
                     <input type="text" id="city-input" placeholder="Enter City" autofocus="on" autocomplete="off" aria-label="default input example"/>
                     <input type="submit" value="search" autofocus="on" class="btn btn-primary"/>
                      <input type ="submit" value= "Location"autofocus="on" id="current-location"class="pinpoint"class="btn btn-success"/> 
                 </form>
                 
-                <i class="fas fa-wind"></i>
+                <img>
+
                 <h1 id="current-city"> </h1>
                 <h2>
                     Today
                 </h2>
+                <span class= "feels" id="feels-like"></span>
                 <span class="highLow" id="high-low"></span>
                 <span class= "humid"id="humidity"></span>
 
                 <p class="searchTemp" id="city-temp"></p>
-                <p class= "feels" id="feels-like"></p>
+                
                 <p class="summary" id="description"> </p>
 
              
@@ -39,9 +41,9 @@
             </div>
     </div>
 
-    <p>
+    <p class="nameTag">
         <a 
-        href= https://github.com/Tweedcam/1st-project > Open Source by  </ahref>
+        href= https://github.com/Tweedcam/1st-project > Open Source by </ahref>
         Andrea Tweed
     </p>
     <script src="src/index.js"></script>

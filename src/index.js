@@ -39,11 +39,13 @@ function search(event) {
 }
 
 function searchCity(city) {
+  
   let apiKey = "6a60b4e3bf611302bb287d289f5f7a29";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(cityTemp);
 }
 
+console.log(searchCity.data);
 function defaultSearch(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -51,14 +53,26 @@ function defaultSearch(event) {
 }
 
 
+
+
 function cityTemp(response) {
-  let p = document.querySelector("#city-temp");
+  console.log(response.data);
+  let temp = document.querySelector("#city-temp");
   let temperature = Math.round(response.data.main.temp);
-  p.innerHTML = `${temperature}°c`;
   let cityElement = document.querySelector("#current-city");
-  cityElement.innerHTML= response.data.name;
   let descriptionElement= document.querySelector("#description");
+  let feel = document.querySelector("#feels-like");
+  let feelsLike =Math.round(response.data.main.feels_like);
+  let maxMin= document.querySelector("#high-low");
+  let maxx = Math.round(response.data.main.temp_max);
+  let minn = Math.round(response.data.main.temp_min);
+
+  
+  temp.innerHTML = `${temperature}°c`;
+  cityElement.innerHTML= response.data.name;
   descriptionElement.innerHTML=response.data.weather[0].description;
+  feel.innerHTML= `Feels like ${feelsLike}°c`;
+  maxMin.innerHTML= `Max ${maxx}°c / Low ${minn}°c`;
   
 }
 
