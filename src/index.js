@@ -61,20 +61,18 @@ function cityTemp(response) {
   let temperature = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#current-city");
   let descriptionElement= document.querySelector("#description");
+  let humidity = document.querySelector("#humidity");
+  let humid = Math.round(response.data.main.humidity);
   let feel = document.querySelector("#feels-like");
   let feelsLike = Math.round(response.data.main.feels_like);
-  let maxMin = document.querySelector("#high-low");
-  let maxx = Math.round(response.data.main.temp_max);
-  let minn = Math.round(response.data.main.temp_min);
   let weatherIcon = document.querySelector("#icon");
   let icon = (response.data.weather[0].icon);
 
-  
+  humidity.innerHTML= `Humidity ${humid}% `;
   temp.innerHTML = `${temperature}°c`;
   cityElement.innerHTML= response.data.name;
   descriptionElement.innerHTML=response.data.weather[0].description;
   feel.innerHTML= `Feels like ${feelsLike}°c`;
-  maxMin.innerHTML= `Max ${maxx}°c / Low ${minn}°c`;
   weatherIcon.setAttribute("src",`http://openweathermap.org/img/wn/${icon}@2x.png`);
   
 }

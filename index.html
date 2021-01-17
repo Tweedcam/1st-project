@@ -16,22 +16,29 @@
     <div class="container">
             <div class="wrapper" class="card-body">
                 <form id="search-form" class="searchForm"class="col-sm-">
-                    <input type="text" id="city-input" placeholder="Enter City" autofocus="on" autocomplete="off" aria-label="default input example"/>
+                    <input type="text" id="city-input" placeholder="Enter City..." autofocus="on" autocomplete="off" aria-label="default input example"/>
                     <input type="submit" value="search" autofocus="on" class="btn btn-primary"/>
                      <input type ="submit" value= "Location"autofocus="on" id="current-location"class="pinpoint"class="btn btn-success"/> 
                 </form>
-                
-                <img src="" id="icon" class="float-centre"/>
-
+                <div class="row"></div> 
+                <div class="col-4">
+                <img src="" id="icon" class="weatherIcon"/>
+                <p class="summary" id="description"> </p>
+            </div>
+                   <div class ="col-11">
                 <h1 id="current-city"> </h1>
                 <h2>
                     Today
                 </h2>
-                <span class= "humid"id="humidity"></span>
                 <p class="searchTemp" id="city-temp"></p>
+                </div>
+                <div class="row">
+                    <div class="col">
                 <span class="feels" id="feels-like"></span>
-                <span class="highLow" id="high-low"></span>
-                <p class="summary" id="description"> </p>
+                <span class="humid" id="humidity"></span>
+                </div>
+                </div>
+              
 
              
 

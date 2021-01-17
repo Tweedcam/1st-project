@@ -33,6 +33,12 @@ h2 {
 .searchForm {
   display: block;
 }
+
+.pinpoint {
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 5px;
+}
 .searchTemp {
   text-align: right;
   display: block;
@@ -41,8 +47,13 @@ h2 {
   font-size: 50px;
 }
 
+.weatherIcon {
+  padding: 20px;
+  :100px ;
+}
+
 .summary {
-  text-align: right;
+  text-align: left;
   display: block;
   padding: 5px;
   font-size: 30px;
