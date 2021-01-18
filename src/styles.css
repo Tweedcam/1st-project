@@ -3,7 +3,7 @@ form {
   display: block;
 }
 
-h1 {
+.city {
   text-align: right;
   display: block;
   margin: 0px 0px 8px;
@@ -11,7 +11,7 @@ h1 {
   color: #006ec5;
 }
 
-h2 {
+.dateTime {
   text-align: right;
   display: block;
   padding: 10px;

@@ -19,8 +19,8 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-let h2 = document.querySelector("h2");
-h2.innerHTML = `${currentDay}</br> ${currentHour}:${minutes}`;
+let dateTime = document.querySelector("#date-time");
+dateTime.innerHTML = `${currentDay}</br> ${currentHour}:${minutes}`;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
