@@ -44,7 +44,17 @@ form {
   display: block;
   color: #006ec5;
   padding: 5px;
-  font-size: 50px;
+  font-size: 30px;
+}
+
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: black;
 }
 
 .weatherIcon {
