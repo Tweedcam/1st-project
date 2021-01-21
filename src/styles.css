@@ -59,7 +59,7 @@ form {
 
 .weatherIcon {
   padding: 20px;
-  :100px ;
+  size: 100px;
 }
 
 .summary {
