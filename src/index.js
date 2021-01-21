@@ -36,11 +36,38 @@ function search(event) {
   let apiKey = "6a60b4e3bf611302bb287d289f5f7a29";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(cityTemp);
+
+
+
+
+
+
+
 }
 
 function showForecast(response){
   let forecastElement= document.querySelector("#forecast");
-console.log(response.data.list[0]);
+  let forecast=(response.data.list[0]);
+
+  forecastElement.innerHTML=` 
+   <div class="col-2">
+   <h4>12:00</h4>
+  <img
+   src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+   />
+  <div id="forecast-temperature">
+  <strong>${Math.round(forecast.main.temp_max)}°c</strong><strong>${Math.round(forecast.main.temp_min)}°c</strong>
+  </div>
+ </div>  `;
+
+
+
+
+
+
+
+
+  console.log(forecast);
 
 }
 
@@ -90,7 +117,7 @@ function cityTemp(response) {
   cityElement.innerHTML= response.data.name;
   descriptionElement.innerHTML=response.data.weather[0].description;
   feel.innerHTML= `Feels like ${feelsLike}°c`;
-  weatherIcon.setAttribute("src",`http://openweathermap.org/img/wn/${icon}@2x.png`);
+  weatherIcon.setAttribute("src",`https://openweathermap.org/img/wn/${icon}@2x.png`);
   
 }
 
