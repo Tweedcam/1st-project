@@ -1,4 +1,5 @@
-let now = new Date();
+function formatDate(timestamp){
+let date = new Date(timestamp);
 let days = [
   "Sunday",
   "Monday",
@@ -8,30 +9,19 @@ let days = [
   "Friday",
   "Saturday"
 ];
-let currentDay = days[now.getDay()];
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
+let day = days[date.getDay()];
+return `${day} ${formatHours(timestamp)}`;
+
 }
-
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-
-let dateTime = document.querySelector("#date-time");
-dateTime.innerHTML = `${currentDay}, ${hours}:${minutes}`;
-
 
 function formatHours(timestamp){
-
-let currentDay = days[now.getDay()];
-let hours = now.getHours();
+let date=new Date(timestamp);
+let hours = date.getHours();
 if (hours < 10) {
   hours = `0${hours}`;
 }
 
-let minutes = now.getMinutes();
+let minutes = date.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
@@ -39,6 +29,10 @@ if (minutes < 10) {
 return `${hours}:${minutes}`;
 
 }
+
+
+
+
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
@@ -53,8 +47,10 @@ function search(event) {
   let unit = "metric";
   let apiKey = "6a60b4e3bf611302bb287d289f5f7a29";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
-  axios.get(apiUrl).then(cityTemp);
+  axios.get(apiUrl).then(cityTemp)
 
+  apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
 
 }
 
