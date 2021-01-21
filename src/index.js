@@ -72,8 +72,6 @@ forecastElement.innerHTML +=`
   }
 
 
-  console.log(forecast);
-
 }
 
 function searchCity(city) {
@@ -98,6 +96,7 @@ function defaultSearch(event) {
 
 
 function cityTemp(response) {
+  console.log(response.data);
   let dateElement = document.querySelector("#date-time");
   let temp = document.querySelector("#city-temp");
   let temperature = Math.round(response.data.main.temp);
@@ -109,10 +108,11 @@ function cityTemp(response) {
   let feelsLike = Math.round(response.data.main.feels_like);
   let weatherIcon = document.querySelector("#icon");
   let icon = (response.data.weather[0].icon);
+  let timeZone= (response.data.timezone);
 
   celsiusTemperature=Math.round(response.data.main.temp)
 
-  dateElement.innerHTML= formatHours(response.data.dt*1000);
+  dateElement.innerHTML= formatHours(response.data.dt * 1000);
   humidity.innerHTML= `Humidity ${humid}% `;
   temp.innerHTML = `${temperature}`;
   cityElement.innerHTML= response.data.name;
