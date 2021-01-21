@@ -9,9 +9,9 @@ let days = [
   "Saturday"
 ];
 let currentDay = days[now.getDay()];
-let currentHour = now.getHours();
-if (currentHour < 10) {
-  currentHour = `0${currentHour}`;
+let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
 }
 
 let minutes = now.getMinutes();
@@ -20,7 +20,25 @@ if (minutes < 10) {
 }
 
 let dateTime = document.querySelector("#date-time");
-dateTime.innerHTML = `${currentDay}, ${currentHour}:${minutes}`;
+dateTime.innerHTML = `${currentDay}, ${hours}:${minutes}`;
+
+
+function formatHours(timestamp){
+
+let currentDay = days[now.getDay()];
+let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
+return `${hours}:${minutes}`;
+
+}
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
@@ -38,12 +56,8 @@ function search(event) {
   axios.get(apiUrl).then(cityTemp);
 
 
-
-
-
-
-
 }
+
 
 function showForecast(response){
   let forecastElement= document.querySelector("#forecast");
@@ -51,7 +65,7 @@ function showForecast(response){
 
   forecastElement.innerHTML=` 
    <div class="col-2">
-   <h4>12:00</h4>
+   <h4>${formatHours(forecast.dt*1000)}</h4>
   <img
    src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
    />
