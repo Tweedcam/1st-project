@@ -30,10 +30,6 @@ return `${hours}:${minutes}`;
 
 }
 
-
-
-
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
@@ -80,11 +76,6 @@ forecastElement.innerHTML +=`
 
 }
 
-
-
-
-
-
 function searchCity(city) {
   
   let apiKey = "6a60b4e3bf611302bb287d289f5f7a29";
@@ -107,7 +98,7 @@ function defaultSearch(event) {
 
 
 function cityTemp(response) {
-  console.log(response.data);
+  let dateElement = document.querySelector("#date-time");
   let temp = document.querySelector("#city-temp");
   let temperature = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#current-city");
@@ -121,6 +112,7 @@ function cityTemp(response) {
 
   celsiusTemperature=Math.round(response.data.main.temp)
 
+  dateElement.innerHTML= formatHours(response.data.dt*1000);
   humidity.innerHTML= `Humidity ${humid}% `;
   temp.innerHTML = `${temperature}`;
   cityElement.innerHTML= response.data.name;
