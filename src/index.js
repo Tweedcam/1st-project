@@ -38,12 +38,29 @@ function search(event) {
   axios.get(apiUrl).then(cityTemp);
 }
 
+function showForecast(response){
+  let forecastElement= document.querySelector("#forecast");
+console.log(response.data.list[0]);
+
+}
+
+
+
+
+
+
 function searchCity(city) {
   
   let apiKey = "6a60b4e3bf611302bb287d289f5f7a29";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(cityTemp);
+
+  apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
+
 }
+
+
 
 console.log(searchCity.data);
 function defaultSearch(event) {
