@@ -67,8 +67,9 @@ form {
 .summary {
   padding: 5px;
   font-size: 20px;
-  position: relative;
-  top: 80px;
+  position: absolute;
+  top: 270px;
+  left: 360px;
 }
 
 .feels {
