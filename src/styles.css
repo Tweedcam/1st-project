@@ -9,6 +9,7 @@ form {
   margin: 0px 0px 8px;
   padding: 10px;
   color: #006ec5;
+  font-family: "Antic Slab", serif;
 }
 
 .dateTime {
@@ -16,6 +17,7 @@ form {
   display: block;
   padding: 10px;
   color: #4f5258;
+  font-family: "Antic Slab", serif;
 }
 
 .wrapper {
@@ -70,14 +72,17 @@ form {
   position: absolute;
   top: 270px;
   left: 360px;
+  font-family: "Antic Slab", serif;
 }
 
 .feels {
   display: block;
   padding: 5px;
+  font-family: "Antic Slab", serif;
 }
 
 .humid {
   display: block;
   padding: 5px;
+  font-family: "Antic Slab", serif;
 }
