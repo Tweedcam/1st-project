@@ -169,7 +169,6 @@ function celsiusConvert(event){
 let celsiusTemperature= null;
 
 
-searchCity("London");
 
 let locationButton= document.querySelector("#current-location");
 locationButton.addEventListener("click",getCurrentLocation);
@@ -181,5 +180,6 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", celsiusConvert);
 
 
+searchCity("London");
 
 

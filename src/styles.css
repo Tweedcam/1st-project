@@ -32,6 +32,7 @@ form {
 
 .searchForm {
   display: block;
+  padding: 30px;
 }
 
 .pinpoint {
@@ -58,17 +59,24 @@ form {
 }
 
 .weatherIcon {
-  padding: 20px;
-  size: 100px;
+  position: absolute;
+  top: 180px;
+  left: 360px;
 }
 
 .summary {
-  text-align: left;
-  display: block;
   padding: 5px;
-  font-size: 30px;
+  font-size: 20px;
+  position: relative;
+  top: 80px;
 }
 
 .feels {
   display: block;
+  padding: 5px;
+}
+
+.humid {
+  display: block;
+  padding: 5px;
 }

@@ -14,47 +14,53 @@
 
 <body>
     <div class="container">
-            <div class="wrapper" class="card-body">
-                <form id="search-form" class="searchForm"class="col-sm-">
+     <div class="wrapper" class="card-body">
+
+
+                <form id="search-form" class="searchForm"class="col-sm">
                     <input type="text" id="city-input" placeholder="Enter City..." autofocus="on" autocomplete="off" aria-label="default input example"/>
                     <input type="submit" value="search" autofocus="on" class="btn btn-primary"/>
                      <input type ="submit" value= "Location"autofocus="on" id="current-location"class="pinpoint"class="btn btn-success"/> 
                 </form>
                
-                   <div class ="col-11">
-               
+              
                 <h2 id="date-time" class="dateTime"></h2>
                 <h1 id="current-city" class="city"> </h1>
-                
                 <div  class="searchTemp" >
                 <strong id="city-temp" ></strong>
                 <span class="unit"> <a href="#" id="celsius" class= "active" > °C</a> | <a href="#" id="fahrenheit"> °F </a> </span>
                 </div>
-            </div>
+                    
+
+               
                 <img src="" id="icon" class="weatherIcon" />
-                        <div class="row">
-                        <div class="col-4">
-                            <p class="summary" id="description"> </p>
-                        </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                        <span class="feels" id="feels-like"></span>
-                        <span class="humid" id="humidity"></span>
-                     </div>
-                </div>
+                  <p class="summary" id="description"> </p>
+                    
+
+
+        <span class="feels" id="feels-like"></span>
+        <span class="humid" id="humidity"></span>
+
 
                 <div class="row" class="weatherForecast" id="forecast"></div>
                 
+           
+           
+           
+           
+           
             </div>
-    </div>
+        </div>
+
 
     <p class="nameTag">
         <a 
         href= https://github.com/Tweedcam/1st-project > Open Source by </ahref>
         Andrea Tweed
     </p>
+   
     <script src="src/index.js"></script>
+
 </body>
 
 </html>
