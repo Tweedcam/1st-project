@@ -21,6 +21,7 @@ form {
 }
 
 .wrapper {
+  padding: 10px;
   max-width: 700px;
   margin: 50px auto;
   background-image: linear-gradient(
@@ -29,7 +30,9 @@ form {
     #87a7d9 50%,
     #def3f8 100%
   );
-  border: 9px;
+  border: 10px;
+  border-color: grey;
+  border-radius: 20px;
 }
 
 .searchForm {
@@ -77,12 +80,16 @@ form {
 
 .feels {
   display: block;
-  padding: 5px;
+  padding: 15px;
   font-family: "Antic Slab", serif;
 }
 
 .humid {
   display: block;
-  padding: 5px;
+  padding: 15px;
+  font-family: "Antic Slab", serif;
+}
+
+.weatherForecast {
   font-family: "Antic Slab", serif;
 }
