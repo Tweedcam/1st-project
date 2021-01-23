@@ -86,8 +86,6 @@ function searchCity(city) {
 }
 
 
-
-console.log(searchCity.data);
 function defaultSearch(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -96,7 +94,6 @@ function defaultSearch(event) {
 
 
 function cityTemp(response) {
-  console.log(response.data);
   let dateElement = document.querySelector("#date-time");
   let temp = document.querySelector("#city-temp");
   let temperature = Math.round(response.data.main.temp);
