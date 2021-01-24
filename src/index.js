@@ -121,6 +121,7 @@ function cityTemp(response) {
 
 
 function currentLocation(position) {
+  console.log(position);
   let lat =(position.coords.latitude);
   let lon = (position.coords.longitude);
   let key = "6a60b4e3bf611302bb287d289f5f7a29";
@@ -131,8 +132,8 @@ function currentLocation(position) {
 
 
 
-  apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showForecast);
+  apiUrl=`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=${units}`;
+  axios.get(apiUrl).then(showForecast)
 
 }
 
